@@ -71,6 +71,25 @@
       font-size: 1.5rem;
     }
 
+    
+  .account-btn {
+    padding: 0.6rem 1.2rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  }
+
+  .account-btn:hover {
+    background-color: #666;
+  }
+
+
     .settings-button {
       padding: 0.6rem 1.2rem;
       background-color: #4CAF50;
@@ -118,6 +137,11 @@
   <main>
     <img src="account.png" alt="アカウント画像" />
     <h1>アカウント名</h1>
+      <div>
+        <button class="account-btn">フォロー</button>
+        <button class="account-btn">フォロワー</button>
+      </div>
+    
     <button class="settings-button">設定</button>
   </main>
 
