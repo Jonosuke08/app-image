@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>トーク | MyBooks=YourBooks</title>
+  <link rel="icon" href="logo.jpeg" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #fff;
+      color: #333;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      outline: none;
+      border: none;
+    }
+
+    header {
+      height: 140px;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+    }
+
+    .logo-link {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-link img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+      border: none;
+      outline: none;
+      transition: filter 0.3s ease;
+    }
+
+    .logo-link:hover img {
+      filter: brightness(0.85);
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    .message-link {
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .message-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      transition: background-color 0.2s;
+    }
+
+    .message-box:hover {
+      background-color: #f0f0f0;
+    }
+
+    .user-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .user-info img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      margin-bottom: 0.5rem;
+    }
+
+    .message-text {
+      font-size: 1.2rem;
+      font-weight: normal;
+    }
+
+    menu {
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem 0;
+    }
+
+    .menu-icons a {
+      text-decoration: none;
+      outline: none;
+      border: none;
+    }
+
+    .menu-icons img {
+      width: 32px;
+      height: 32px;
+      filter: grayscale(100%);
+      transition: opacity 0.3s ease;
+    }
+
+    .menu-icons img:hover {
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="home.html" class="logo-link">
+      <img src="logo.png" alt="logo" />
+    </a>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- 5つのメッセージリンク付きボックス -->
+    <a href="message.html" class="message-link">
+      <div class="message-box">
+        <div class="user-info">
+          <img src="account.png" alt="account" />
+          <div>アカウント名</div>
+        </div>
+        <div class="message-text">メッセージを送る</div>
+      </div>
+    </a>
+
+    <a href="message.html" class="message-link">
+      <div class="message-box">
+        <div class="user-info">
+          <img src="account.png" alt="account" />
+          <div>アカウント名</div>
+        </div>
+        <div class="message-text">メッセージを送る</div>
+      </div>
+    </a>
+
+    <a href="message.html" class="message-link">
+      <div class="message-box">
+        <div class="user-info">
+          <img src="account.png" alt="account" />
+          <div>アカウント名</div>
+        </div>
+        <div class="message-text">メッセージを送る</div>
+      </div>
+    </a>
+
+    <a href="message.html" class="message-link">
+      <div class="message-box">
+        <div class="user-info">
+          <img src="account.png" alt="account" />
+          <div>アカウント名</div>
+        </div>
+        <div class="message-text">メッセージを送る</div>
+      </div>
+    </a>
+
+    <a href="message.html" class="message-link">
+      <div class="message-box">
+        <div class="user-info">
+          <img src="account.png" alt="account" />
+          <div>アカウント名</div>
+        </div>
+        <div class="message-text">メッセージを送る</div>
+      </div>
+    </a>
+  </main>
+
+  <!-- Menu -->
+  <menu class="menu-icons">
+    <a href="search.html"><img src="search.png" alt="search" /></a>
+    <a href="talk.html"><img src="talk.jpg" alt="talk" /></a>
+    <a href="home.html"><img src="home.png" alt="home" /></a>
+    <a href="library.html"><img src="library.png" alt="library" /></a>
+    <a href="account.html"><img src="account.png" alt="account" /></a>
+  </menu>
+
+</body>
+</html>

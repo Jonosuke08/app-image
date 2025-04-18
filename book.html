@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>本の購入 | MyBooks=YourBooks</title>
+  <link rel="icon" href="logo.jpeg" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #fff;
+      color: #333;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      height: 140px;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+    }
+
+    .logo-link {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-link img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+      border: none;
+      outline: none;
+      transition: filter 0.3s ease;
+    }
+
+    .logo-link:hover img {
+      filter: brightness(0.85);
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      padding: 2rem;
+      gap: 2rem;
+    }
+
+    .book-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .book-image img {
+      width: 200px;
+      height: auto;
+    }
+
+    .book-info {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .book-info h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .book-info p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .buy-button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: fit-content;
+    }
+
+    .buy-button:hover {
+      background-color: #388E3C;
+    }
+
+
+    menu {
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem 0;
+      background-color: white;
+    }
+
+    .menu-icons img {
+      width: 32px;
+      height: 32px;
+      filter: grayscale(100%);
+      transition: opacity 0.3s ease;
+    }
+
+    .menu-icons img:hover {
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="home.html" class="logo-link">
+      <img src="logo.png" alt="logo" />
+    </a>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <div class="book-image">
+      <img src="book.png" alt="book image" />
+    </div>
+    <div class="book-info">
+      <h1>本の題名</h1>
+      <p>この本は読書家にとって必読の一冊です。内容は深く、感動的で、多くの人々の人生に影響を与えてきました。</p>
+      <button class="buy-button">購入する</button>
+    </div>
+  </main>
+  
+
+  <!-- Menu -->
+  <menu class="menu-icons">
+    <a href="search.html"><img src="search.png" alt="search" /></a>
+    <a href="talk.html"><img src="talk.jpg" alt="talk" /></a>
+    <a href="home.html"><img src="home.png" alt="home" /></a>
+    <a href="library.html"><img src="library.png" alt="library" /></a>
+    <a href="account.html"><img src="account.png" alt="account" /></a>
+  </menu>
+
+</body>
+</html>
+
