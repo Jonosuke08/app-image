@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyBooks=YourBooks</title>
+  <link rel="icon" href="logo.jpeg" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <style>
+
+    /* ローディング画面のスタイル */
+#splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut 1.5s ease 2s forwards;
+}
+
+#splash img {
+  width: 150px;
+  height: auto;
+  opacity: 0;
+  animation: logoFadeIn 1.5s ease forwards;
+}
+
+/* ロゴのフェードイン */
+@keyframes logoFadeIn {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* スプラッシュ画面をフェードアウトして非表示 */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #fff;
+      color: #333;
+      line-height: 1.5;
+      max-width: 1000px;
+      overflow-x: hidden;
+      margin:0 auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      outline: none;
+      border: none;
+    }
+
+    header {
+      height: 140px;
+      background-color:white;
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+    }
+
+    .logo-link {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-link img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+      border: none;
+      outline: none;
+      transition: filter 0.3s ease;
+    }
+
+    .logo-link:hover img {
+      filter: brightness(0.85);
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    .section-wrapper {
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .section-title a {
+      text-decoration: none;
+    }
+
+    .swiper {
+      width: 100%;
+      padding-bottom: 30px;
+    }
+
+    .swiper-slide {
+      width: auto;
+    }
+
+    .swiper-slide a img {
+      width: 96px;
+      height: 96px;
+      margin-right: 10px;
+      display: block;
+      transition: opacity 0.3s ease;
+      /* filter: grayscale(100%); */
+    }
+
+    .swiper-slide a img:hover {
+      opacity: 0.8;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #888;
+    }
+
+    menu {
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem 0;
+    }
+
+    .menu-icons a {
+      text-decoration: none;
+      outline: none;
+      border: none;
+    }
+
+    .menu-icons img {
+      width: 32px;
+      height: 32px;
+      filter: grayscale(100%);
+      transition: opacity 0.3s ease;
+    }
+
+    .menu-icons img:hover {
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ローディング画面 -->
+<div id="splash">
+  <img src="logo.jpeg" alt="Logo" />
+</div>
+
+  <!-- Header -->
+  <header>
+    <a href="home.html" class="logo-link">
+      <img src="logo.png" alt="logo" />
+    </a>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Section: おすすめ -->
+    <div class="section-wrapper">
+      <h2 class="section-title"><a href="reccomend.html">おすすめ</a></h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- 15枚の book.png -->
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+    <!-- Section: フォロワーが読んでいる本 -->
+    <div class="section-wrapper">
+      <h2 class="section-title"><a href="follower.html">フォロワーが読んでいる本</a></h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+    <!-- Section: 新作の本 -->
+    <div class="section-wrapper">
+      <h2 class="section-title"><a href="new.html">新作の本</a></h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+          <div class="swiper-slide"><a href="book.html"><img src="book.png" alt="book" /></a></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Menu -->
+  <menu class="menu-icons">
+    <a href="search.html"><img src="search.png" alt="search" /></a>
+    <a href="talk.html"><img src="talk.jpg" alt="talk" /></a>
+    <a href="home.html"><img src="home.png" alt="home" /></a>
+    <a href="library.html"><img src="library.png" alt="library" /></a>
+    <a href="account.html"><img src="account.png" alt="account" /></a>
+  </menu>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    document.querySelectorAll('.mySwiper').forEach((swiperEl) => {
+      new Swiper(swiperEl, {
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        loop: true,
+        navigation: {
+          nextEl: swiperEl.querySelector('.swiper-button-next'),
+          prevEl: swiperEl.querySelector('.swiper-button-prev')
+        }
+      });
+    });
+  </script>
+</body>
+</html>

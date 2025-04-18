@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>メッセージ | MyBooks=YourBooks</title>
+  <link rel="icon" href="logo.jpeg" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #fff;
+      color: #333;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      height: 140px;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+    }
+
+    .logo-link {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-link img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+      border: none;
+      outline: none;
+      transition: filter 0.3s ease;
+    }
+
+    .logo-link:hover img {
+      filter: brightness(0.85);
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+
+    .chat-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .chat-header img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      margin-right: 1rem;
+    }
+
+    .account-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .chat-input {
+      border-top: 1px solid #ccc;
+      padding-top: 1rem;
+    }
+
+    .chat-input input {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    menu {
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem 0;
+      background-color: white;
+    }
+
+    .menu-icons img {
+      width: 32px;
+      height: 32px;
+      filter: grayscale(100%);
+      transition: opacity 0.3s ease;
+    }
+
+    .menu-icons img:hover {
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="home.html" class="logo-link">
+      <img src="logo.png" alt="logo" />
+    </a>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Chat header -->
+    <div class="chat-header">
+      <img src="account.png" alt="account" />
+      <div class="account-name">アカウント名</div>
+    </div>
+
+    <!-- Chat input -->
+    <div class="chat-input">
+      <input type="text" placeholder="メッセージを入力..." />
+    </div>
+  </main>
+
+  <!-- Menu -->
+  <menu class="menu-icons">
+    <a href="search.html"><img src="search.png" alt="search" /></a>
+    <a href="talk.html"><img src="talk.jpg" alt="talk" /></a>
+    <a href="home.html"><img src="home.png" alt="home" /></a>
+    <a href="library.html"><img src="library.png" alt="library" /></a>
+    <a href="account.html"><img src="account.png" alt="account" /></a>
+  </menu>
+
+</body>
+</html>

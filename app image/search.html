@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>検索 | MyBooks=YourBooks</title>
+  <link rel="icon" href="logo.jpeg" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #fff;
+      color: #333;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      outline: none;
+      border: none;
+    }
+
+    header {
+      height: 140px;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+    }
+
+    .logo-link {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-link img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+      border: none;
+      outline: none;
+      transition: filter 0.3s ease;
+    }
+
+    .logo-link:hover img {
+      filter: brightness(0.85);
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    .search-box {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .category {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      height: 150px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #fff;
+      transition: opacity 0.3s ease;
+    }
+
+    .category:hover {
+      opacity: 0.9;
+    }
+
+    .novel {
+      background-color: #6c63ff;
+    }
+
+    .business {
+      background-color: #28a745;
+    }
+
+    .manga {
+      background-color: #ff6f61;
+    }
+
+    menu {
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem 0;
+    }
+
+    .menu-icons a {
+      text-decoration: none;
+      outline: none;
+      border: none;
+    }
+
+    .menu-icons img {
+      width: 32px;
+      height: 32px;
+      filter: grayscale(100%);
+      transition: opacity 0.3s ease;
+    }
+
+    .menu-icons img:hover {
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="home.html" class="logo-link">
+      <img src="logo.png" alt="logo" />
+    </a>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <div class="search-box">
+      <input type="text" placeholder="本を検索..." />
+    </div>
+
+    <a href="novel.html" class="category novel">小説</a>
+    <a href="business.html" class="category business">ビジネス</a>
+    <a href="manga.html" class="category manga">漫画</a>
+  </main>
+
+  <!-- Menu -->
+  <menu class="menu-icons">
+    <a href="search.html"><img src="search.png" alt="search" /></a>
+    <a href="talk.html"><img src="talk.jpg" alt="talk" /></a>
+    <a href="home.html"><img src="home.png" alt="home" /></a>
+    <a href="library.html"><img src="library.png" alt="library" /></a>
+    <a href="account.html"><img src="account.png" alt="account" /></a>
+  </menu>
+
+</body>
+</html>
