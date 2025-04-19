@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>作家ページ</title>
+  <link rel="icon" href="logo.jpeg" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #fff;
+      color: #333;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      height: 140px;
+      background-color:white;
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+    }
+
+    .logo-link {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-link img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+      border: none;
+      outline: none;
+      transition: filter 0.3s ease;
+    }
+
+    .logo-link:hover img {
+      filter: brightness(0.85);
+    }
+
+    main {
+      padding: 2rem 1rem;
+    }
+
+    .author-profile {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .author-profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .author-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .author-bio {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .works-section {
+      text-align: center;
+    }
+
+    .works-section h2 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    .books-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .books-grid a img {
+      width: 96px;
+      height: 96px;
+      transition: opacity 0.3s ease;
+    }
+
+    .books-grid a img:hover {
+      opacity: 0.8;
+    }
+
+    menu {
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem 0;
+    }
+
+    .menu-icons img {
+      width: 32px;
+      height: 32px;
+      filter: grayscale(100%);
+      transition: opacity 0.3s ease;
+    }
+
+    .menu-icons img:hover {
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="home.html" class="logo-link">
+      <img src="logo.png" alt="logo" />
+    </a>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <div class="author-profile">
+      <img src="user.png" alt="author image" />
+      <div class="author-name">作家名</div>
+      <p class="author-bio">これは作家の紹介文です。作家の経歴や特徴、ジャンルなどを記載できます。</p>
+    </div>
+
+    <div class="works-section">
+      <h2>この作家の作品</h2>
+      <div class="books-grid">
+        <!-- 10個のbook.png -->
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Menu -->
+  <menu class="menu-icons">
+    <a href="search.html"><img src="search.png" alt="search" /></a>
+    <a href="talk.html"><img src="talk.jpg" alt="talk" /></a>
+    <a href="home.html"><img src="home.png" alt="home" /></a>
+    <a href="library.html"><img src="library.png" alt="library" /></a>
+    <a href="account.html"><img src="account.png" alt="account" /></a>
+  </menu>
+
+</body>
+</html>
