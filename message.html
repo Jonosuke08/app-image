@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>メッセージ | MyBooks=YourBooks</title>
   <link rel="icon" href="logo.jpeg" />
   <style>
@@ -67,6 +68,9 @@
       display: flex;
       align-items: center;
       margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #f9f9f9;
     }
 
     .chat-header img {
@@ -79,6 +83,34 @@
     .account-name {
       font-size: 1.2rem;
       font-weight: bold;
+    }
+
+    .chat-box {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 5rem;
+      /* テキストボックスのスペース確保 */
+      background-color: #fff;
+      margin-bottom: 5rem;
+    }
+
+    .message {
+      max-width: 70%;
+      padding: 10px 15px;
+      border-radius: 15px;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .message.left {
+      background-color: #f0f0f0;
+      align-self: flex-start;
+    }
+
+    .message.right {
+      background-color: #d0f0ff;
+      align-self: flex-end;
     }
 
     .chat-input {
@@ -113,6 +145,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- Header -->
@@ -128,6 +161,18 @@
     <div class="chat-header">
       <img src="account.png" alt="account" />
       <div class="account-name">アカウント名</div>
+    </div>
+    <!-- トークボックス全体 -->
+    <div class="chat-box">
+      <!-- 相手からのメッセージ -->
+      <div class="message left">
+        <p>こんにちは！この本おすすめです📚</p>
+      </div>
+
+      <!-- 自分のメッセージ -->
+      <div class="message right">
+        <p>ありがとうございます！読んでみます！</p>
+      </div>
     </div>
 
     <!-- Chat input -->
@@ -146,4 +191,5 @@
   </menu>
 
 </body>
+
 </html>
