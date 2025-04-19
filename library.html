@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ライブラリ | MyBooks=YourBooks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>試し読み - MyBooks=YourBooks</title>
   <link rel="icon" href="logo.jpeg" />
   <style>
     * {
@@ -16,11 +17,10 @@
       font-family: sans-serif;
       background-color: #fff;
       color: #333;
+      line-height: 1.5;
       max-width: 1000px;
       margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
+      overflow-x: hidden;
     }
 
     a {
@@ -47,56 +47,15 @@
       width: auto;
       object-fit: contain;
       border: none;
-      outline: none;
-      transition: filter 0.3s ease;
-    }
-
-    .logo-link:hover img {
-      filter: brightness(0.85);
-    }
-
-    main {
-      flex: 1;
-      padding: 1rem;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-    }
-
-    .bookshelf {
-      background-color:#777; 
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      border: 2px solid #111;
-      border-radius: 12px;
-      padding: 1rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      justify-content: space-around;
-    }
-
-    .bookshelf a img {
-      width: 96px;
-      height: 96px;
-      transition: opacity 0.3s ease;
-    }
-
-    .bookshelf a img:hover {
-      opacity: 0.5;
     }
 
     menu {
       display: flex;
       justify-content: space-around;
       padding: 1rem 0;
-      background-color: white;
     }
 
-    .menu-icons img {
+    .menu-icons a img {
       width: 32px;
       height: 32px;
       filter: grayscale(100%);
@@ -106,8 +65,110 @@
     .menu-icons img:hover {
       opacity: 0.7;
     }
+
+    /* === Main Reels Style === */
+    main {
+      height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
+
+    .book-section {
+      height: 100vh;
+      scroll-snap-align: start;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    /* Animation for smooth fade-in */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .horizontal-scroll {
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      height: 90%;
+      width: 100%;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .trial-box {
+      min-width: 90%;
+      height: 100%;
+      scroll-snap-align: center;
+      background-color: #f8f8f8;
+      border: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: #555;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      flex-direction: column;
+      justify-content: space-between;
+
+    }
+
+    .trial-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .trial-title {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .author-name {
+      color: #007BFF;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    
+
+    .author-name a {
+      text-decoration: none;
+    }
+
+    .purchase-btn {
+      padding: 10px 15px;
+      background-color: #007BFF;
+      color: white;
+      text-align: center;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .purchase-btn:hover {
+      background-color: #0056b3;
+      /* ホバー時の色変更 */
+    }
   </style>
 </head>
+
 <body>
 
   <!-- Header -->
@@ -117,27 +178,57 @@
     </a>
   </header>
 
-  <!-- Main -->
+  <!-- Main Content -->
   <main>
-    <h2>Your Library</h2>
-    <div class="bookshelf">
-      <!-- book.png 15個リンク -->
-      <a href="book.html"><img src="book.png" alt="book" /></a>
-      <a href="book.html"><img src="book.png" alt="book" /></a>
-      <a href="book.html"><img src="book.png" alt="book" /></a>
-      <a href="book.html"><img src="book.png" alt="book" /></a>
-      <a href="book.html"><img src="book.png" alt="book" /></a>
-      <a href="book.html"><img src="book.png" alt="book" /></a>
-      <a href="book.html"><img src="book.png" alt="book" /></a>
-      <a href="book.html"><img src="book.png" alt="book" /></a>
-      <a href="book.html"><img src="book.png" alt="book" /></a>
-      <a href="book.html"><img src="book.png" alt="book" /></a>
-      <a href="book.html"><img src="book.png" alt="book" /></a>
-      <a href="book.html"><img src="book.png" alt="book" /></a>
-      <a href="book.html"><img src="book.png" alt="book" /></a>
-      <a href="book.html"><img src="book.png" alt="book" /></a>
-      <a href="book.html"><img src="book.png" alt="book" /></a>
-    </div>
+    <!-- 書籍1 -->
+    <section class="book-section">
+      <div class="horizontal-scroll">
+        <div class="trial-box">書籍1のページ1（試し読みテキスト）</div>
+        <div class="trial-box">書籍1のページ2（試し読みテキスト）</div>
+        <div class="trial-box">書籍1のページ3（試し読みテキスト）</div>
+        <div class="trial-box">
+          <h3 class="trial-title">作品名</h3>
+          <p>作品紹介です。</p>
+          <img src="user.png" alt="author image" width="120" height="120"/>
+          <p class="author-name"><a href="author.html">作家名</a></p>
+          <a href="book.html" class="purchase-btn">購入ページに進む</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 書籍2 -->
+    <section class="book-section">
+      <div class="horizontal-scroll">
+        <div class="trial-box">書籍2のページ1（試し読みテキスト）</div>
+        <div class="trial-box">書籍2のページ2（試し読みテキスト）</div>
+        <div class="trial-box">書籍2のページ3（試し読みテキスト）</div>
+        <div class="trial-box">
+          <h3 class="trial-title">作品名</h3>
+          <p>作品紹介です。</p>
+          <img src="user.png" alt="author image" width="120" height="120"/>
+          <p class="author-name"><a href="author.html">作家名</a></p>
+          <a href="book.html" class="purchase-btn">購入ページに進む</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 書籍3 -->
+    <section class="book-section">
+      <div class="horizontal-scroll">
+        <div class="trial-box">書籍3のページ1（試し読みテキスト）</div>
+        <div class="trial-box">書籍3のページ2（試し読みテキスト）</div>
+        <div class="trial-box">書籍3のページ3（試し読みテキスト）</div>
+        <div class="trial-box">
+          <h3 class="trial-title">作品名</h3>
+          <p>作品紹介です。</p>
+          <img src="user.png" alt="author image" width="120" height="120"/>
+          <p class="author-name"><a href="author.html">作家名</a></p>
+          <a href="book.html" class="purchase-btn">購入ページに進む</a>
+        </div>
+      </div>
+    </section>
+
+
   </main>
 
   <!-- Menu -->
@@ -150,4 +241,5 @@
   </menu>
 
 </body>
+
 </html>

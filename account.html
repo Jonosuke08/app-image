@@ -89,6 +89,34 @@
     background-color: #666;
   }
 
+  h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .bookshelf {
+      background-color:#777; 
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      border: 2px solid #111;
+      border-radius: 12px;
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: space-around;
+    }
+
+    .bookshelf a img {
+      width: 96px;
+      height: 96px;
+      transition: opacity 0.3s ease;
+    }
+
+    .bookshelf a img:hover {
+      opacity: 0.5;
+    }
 
     .settings-button {
       padding: 0.6rem 1.2rem;
@@ -141,7 +169,25 @@
         <button class="account-btn">フォロー</button>
         <button class="account-btn">フォロワー</button>
       </div>
-    
+      <h2>Your Library</h2>
+      <div class="bookshelf">
+        <!-- book.png 15個リンク -->
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+        <a href="book.html"><img src="book.png" alt="book" /></a>
+      </div>
     <button class="settings-button">設定</button>
   </main>
 
